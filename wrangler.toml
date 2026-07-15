@@ -5,7 +5,7 @@ workers_dev = true
 
 # Fill in your own Cloudflare account ID (Dashboard → Workers & Pages → Overview,
 # right sidebar). Not sensitive, but not guessable from this repo.
-account_id = "REPLACE_WITH_YOUR_ACCOUNT_ID"
+account_id = "dfc669c2db86a07cf37bb52373416596"
 
 # Optional: raises the GitHub API rate limit from 60/hr to 5000/hr.
 # Set once with: npx wrangler secret put GITHUB_TOKEN

@@ -109,7 +109,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 // Currently working on — fetched from a Cloudflare Worker
-const CURRENTLY_WORKER_URL = 'https://portfolio-currently.YOUR_SUBDOMAIN.workers.dev';
+const CURRENTLY_WORKER_URL = 'https://portfolio-currently.vvaj99.workers.dev';
 
 function timeAgo(isoDate) {
   const seconds = Math.floor((Date.now() - new Date(isoDate)) / 1000);
