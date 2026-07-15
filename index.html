@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro Viana — Portfolio</title>
+  <meta name="description" content="Portfolio of Alejandro Viana — networking, embedded systems, and security.">
+  <link rel="icon" href="assets/circle-user-svgrepo-com.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Arial:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">Alejandro Viana</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+
+        <a href="#contact" class="nav-link nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section id="home" class="section hero">
+      <div class="container">
+        <p class="eyebrow mono">Portfolio</p>
+        <h1 class="hero-title">Hi, I'm <span class="accent-text">Alejandro Viana</span>.</h1>
+        <p class="hero-subtitle">I am a computer engineer graduated from the University of Texas at Tyler focused on networking, full-stack development, and embedded systems. I have 4+ years of experience in industrial operations, supervision of technical teams, and maintenance/service of heavy machinery.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Work</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow mono">01</p>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="grid grid-projects">
+
+          <article class="card project-card">
+            <div class="card-top">
+              <span class="tag tag-net mono">Object Detection</span>
+              <span class="card-year mono">2026</span>
+            </div>
+            <h3 class="card-title">Air-Ground Robotic Tracking System</h3>
+            <p class="card-desc">Deployed a real-time YOLO object detection model to enable autonomous flight for a DJI Tello drone, improving operational efficiency by 30%.</p>
+            <ul class="tech-list mono">
+              <li>Tech: Python, OpenCV, Ultranalytics, djitellopy SDK</li>
+              <li>Hardware: Raspberry Pi, Arduino, DJI Tello</li>
+            </ul>
+            <a href="#" class="card-link" data-video="assets/videos/air-ground.mp4">View project →</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="card-top">
+              <span class="tag tag-emb mono">FPGA</span>
+              <span class="card-year mono">2025</span>
+            </div>
+            <h3 class="card-title">FSM Car Parking System</h3>
+            <p class="card-desc">Designed a Finite State Machine on Diligent Basys 3 board using Xilinx Vivado. Implemented I/O control logic for a car parking system to manage available spaces.</p>
+            <ul class="tech-list mono">
+              <li>Tech: VHDL, Xilinx Vivado</li>
+              <li>Hardware: Diligent Basys 3</li>
+            </ul>
+            <a href="#" class="card-link" data-image="assets/fsm-car-parking.png">View project →</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="card-top">
+              <span class="tag tag-sec mono">Web Development</span>
+              <span class="card-year mono">2025</span>
+            </div>
+            <h3 class="card-title">HTTP Equipment Maintenance Tracker</h3>
+            <p class="card-desc">Developed a RESTful architecture to host a local web-based application to track status of equipment maintenance schedules.</p>
+            <ul class="tech-list mono">
+              <li>Tech: JavaScript, Node.js, Express</li>
+
+            </ul>
+            <a href="https://github.com/aleViana/Nethttp" class="card-link" target="_blank" rel="noopener">View project →</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="card-top">
+              <span class="tag tag-net mono">Web Development</span>
+              <span class="card-year mono">2025</span>
+            </div>
+            <h3 class="card-title">LAMP Stack on Raspberry Pi</h3>
+            <p class="card-desc">Deployed a LAMP stack on a Raspberry Pi to host a local web application.</p>
+            <ul class="tech-list mono">
+              <li>Tech: Apache, MariaDB, PHP</li>
+              <li>Stack: LAMP</li>
+              <li>Hardware: Raspberry Pi</li>
+            </ul>
+            <a href="#" class="card-link" data-video="assets/videos/lamp-raspberry-pi.mp4">View project →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <p class="eyebrow mono">02</p>
+        <h2 class="section-title">Experience</h2>
+
+        <ol class="timeline">
+
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <p class="timeline-period mono">August 2021 – Present</p>
+              <h3 class="timeline-role">Supervisor</h3>
+              <p class="timeline-company">MIC Services</p>
+              <p class="timeline-desc">Supervise repair crews and ensure all safety protocols are followed in fast-paced marine environments.</p>
+              <ul class="pill-list mono">
+                <li>Client Communication</li>
+                <li>Service Report and Documentation</li>
+                <li>Team Leadership</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <p class="timeline-period mono">July 2023 – November 2025</p>
+              <h3 class="timeline-role">Commercial Driver</h3>
+              <p class="timeline-company">MIC Rentals</p>
+              <p class="timeline-desc">Responsible for the safe transportation of equipment to and from various customer job locations and stores. Assist in the maintenance and troubleshooting of scissor lifts, telehandlers and boom lifts.</p>
+              <ul class="pill-list mono">
+                <li>Service and Maintenance of Equipment</li>
+                <li>Mechanical Skills</li>
+                <li>Customer Service</li>
+              </ul>
+            </div>
+          </li>
+
+        
+
+        </ol>
+      </div>
+    </section>
+
+  
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-inner">
+        <p class="eyebrow mono">03</p>
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-text">Open to opportunities and collaborations. The best way to reach me is by email.</p>
+        <div class="contact-links">
+          <a href="mailto:ale99vv@gmail.com" class="btn btn-primary">ale99vv@gmail.com</a>
+          <a href="https://github.com/aleViana" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/alejandro-viana-rm" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="mono">© <span id="year"></span> Alejandro</p>
+      <a href="#home" class="back-to-top mono">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div id="videoModal" class="video-modal" hidden>
+    <div class="video-modal-backdrop" data-close-modal></div>
+    <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-label="Project video">
+      <button type="button" class="video-modal-close" data-close-modal aria-label="Close video">✕</button>
+      <video id="videoModalPlayer" class="video-modal-player" controls playsinline></video>
+      <img id="videoModalImage" class="video-modal-player" alt="" hidden>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
