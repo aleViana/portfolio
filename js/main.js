@@ -107,3 +107,40 @@ videoModal.querySelectorAll('[data-close-modal]').forEach((el) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && !videoModal.hidden) closeVideoModal();
 });
+
+// Currently working on — fetched from a Cloudflare Worker
+const CURRENTLY_WORKER_URL = 'https://portfolio-currently.YOUR_SUBDOMAIN.workers.dev';
+
+function timeAgo(isoDate) {
+  const seconds = Math.floor((Date.now() - new Date(isoDate)) / 1000);
+  const units = [
+    ['year', 31536000],
+    ['month', 2592000],
+    ['day', 86400],
+    ['hour', 3600],
+    ['minute', 60],
+  ];
+  for (const [name, secondsInUnit] of units) {
+    const count = Math.floor(seconds / secondsInUnit);
+    if (count >= 1) return `${count} ${name}${count > 1 ? 's' : ''} ago`;
+  }
+  return 'just now';
+}
+
+const currentlyCard = document.getElementById('currentlyCard');
+
+fetch(CURRENTLY_WORKER_URL)
+  .then((response) => {
+    if (!response.ok) throw new Error('Worker request failed');
+    return response.json();
+  })
+  .then((repo) => {
+    currentlyCard.innerHTML = `
+      <h3 class="card-title"><a href="${repo.url}" target="_blank" rel="noopener">${repo.name}</a></h3>
+      <p class="card-desc">${repo.description || 'No description provided.'}</p>
+      <p class="card-year mono">${repo.language ? `${repo.language} · ` : ''}pushed ${timeAgo(repo.pushed_at)}</p>
+    `;
+  })
+  .catch(() => {
+    currentlyCard.innerHTML = '<p class="card-desc">Check back soon.</p>';
+  });

@@ -1,0 +1,11 @@
+name = "portfolio-currently"
+main = "worker/index.js"
+compatibility_date = "2026-07-14"
+workers_dev = true
+
+# Fill in your own Cloudflare account ID (Dashboard → Workers & Pages → Overview,
+# right sidebar). Not sensitive, but not guessable from this repo.
+account_id = "REPLACE_WITH_YOUR_ACCOUNT_ID"
+
+# Optional: raises the GitHub API rate limit from 60/hr to 5000/hr.
+# Set once with: npx wrangler secret put GITHUB_TOKEN

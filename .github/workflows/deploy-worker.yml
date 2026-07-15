@@ -1,0 +1,25 @@
+name: Deploy Currently-Working-On Worker
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'worker/**'
+      - 'wrangler.toml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # Requires a repo secret CLOUDFLARE_API_TOKEN (Settings -> Secrets and
+      # variables -> Actions), a Cloudflare API token scoped to "Edit Cloudflare
+      # Workers" for your account. Also fill in account_id in wrangler.toml.
+      - name: Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: deploy
