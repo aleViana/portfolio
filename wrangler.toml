@@ -1,4 +1,4 @@
-name = "portfolio-currently"
+name = "portfolio1"
 main = "worker/index.js"
 compatibility_date = "2026-07-14"
 workers_dev = true
