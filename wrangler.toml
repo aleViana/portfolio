@@ -1,11 +1,11 @@
-name = "portfolio-currently"
-main = "worker/index.js"
-compatibility_date = "2026-07-14"
-workers_dev = true
+name = "portfolio1"
+compatibility_date = "2026-07-15"
 
-# Fill in your own Cloudflare account ID (Dashboard → Workers & Pages → Overview,
-# right sidebar). Not sensitive, but not guessable from this repo.
-account_id = "dfc669c2db86a07cf37bb52373416596"
-
-# Optional: raises the GitHub API rate limit from 60/hr to 5000/hr.
-# Set once with: npx wrangler secret put GITHUB_TOKEN
+# This is the config the "portfolio1" Cloudflare Pages/Workers Builds project
+# actually deploys from (its Deploy command is `npx wrangler deploy`, run at
+# the repo root). It serves the static site as-is — no server-side code.
+# The separate "currently working on" API has its own config at
+# worker/wrangler.toml and is deployed independently by
+# .github/workflows/deploy-worker.yml, not by this project's build.
+[assets]
+directory = "./"
