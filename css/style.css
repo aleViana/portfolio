@@ -501,7 +501,7 @@ img.video-modal-player {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 300px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
