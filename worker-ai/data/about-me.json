@@ -1,0 +1,19 @@
+{
+  "name": "Alejandro Viana",
+  "role": "Computer Engineer",
+  "summary": "Computer Engineer with a passion for web development and cloud computing. Experienced in building scalable web applications and deploying them using modern DevOps practices.",
+  "skills": ["Cloudflare Workers", "GitHub Actions", "Python", "Flask", "Docker", "JavaScript", "HTML", "CSS", "Pandas", "NumPy","Express", "Node.js", "Matplotlib", "YOLOv8", "OpenCV", "linux", "Verilog"],
+  "projects": [
+    {"name": "World Cup Stats Visualizer", "description": "A web service for visualizing World Cup head to head matches between the 8 teams that have won the tournament", "tech": ["Flask", "Python", "Docker", "Render"]},
+    {"name": "YOLOv8 Object Detection", "description": "Development of an object detection system using YOLOv8 to enable real-time object detection and autonomous flight for a DJI Tello drone", "tech": ["Python", "OpenCV", "YOLOv8"]},
+    {"name": "Portfolio Website", "description": "A responsive portfolio website showcasing my projects and skills. Built a CI/CD pipeline using Cloudflare Workers.", "tech": ["Cloudflare Workers", "JavaScript"]},
+    {"name": "Finite State Machine Implementation", "description": "Implementation of a finite state machine for managing a parking system to count the number of available spots", "tech": ["Verilog", "Vivado"]},
+    {"name": "HTTP Request Handler for an Inventory", "description": "Implementation of a REStful API to handle requests to get status of machines in an inventory", "tech": ["JavaScript", "Node.js", "Express"]}
+    
+  ],
+  "experience": [
+    {"role": "Supervisor", "company": "MIC Services", "years": "5"},
+    {"role": "Computer Engineer", "company": "Freelance", "years": "2"}
+
+  ]
+}

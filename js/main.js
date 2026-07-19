@@ -144,3 +144,53 @@ fetch(CURRENTLY_WORKER_URL)
   .catch(() => {
     currentlyCard.innerHTML = '<p class="card-desc">Check back soon.</p>';
   });
+
+// AI chatbot — fetched from a Cloudflare Worker running Workers AI
+const CHAT_WORKER_URL = 'https://portfolio-ai-chat.vvaj99.workers.dev';
+
+const chatMessages = document.getElementById('chat-messages');
+const chatInput = document.getElementById('chat-input');
+const chatSend = document.getElementById('chat-send');
+
+function appendChatMessage(role, text) {
+  const message = document.createElement('p');
+  message.className = `chat-message chat-message-${role}`;
+  message.textContent = text;
+  chatMessages.appendChild(message);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  return message;
+}
+
+async function sendChatMessage() {
+  const text = chatInput.value.trim();
+  if (!text) return;
+
+  appendChatMessage('user', text);
+  chatInput.value = '';
+  chatInput.disabled = true;
+  chatSend.disabled = true;
+  const pendingMessage = appendChatMessage('bot', 'Thinking…');
+
+  try {
+    const response = await fetch(CHAT_WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text }),
+    });
+    if (!response.ok) throw new Error('Chat request failed');
+    const { reply } = await response.json();
+    pendingMessage.textContent = reply;
+  } catch (error) {
+    pendingMessage.textContent = "Sorry, I couldn't reach the chatbot right now.";
+  } finally {
+    chatInput.disabled = false;
+    chatSend.disabled = false;
+    chatInput.focus();
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+}
+
+chatSend.addEventListener('click', sendChatMessage);
+chatInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') sendChatMessage();
+});

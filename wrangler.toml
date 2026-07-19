@@ -9,3 +9,6 @@ compatibility_date = "2026-07-15"
 # .github/workflows/deploy-worker.yml, not by this project's build.
 [assets]
 directory = "./"
+
+
+

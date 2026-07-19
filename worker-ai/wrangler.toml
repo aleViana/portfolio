@@ -1,0 +1,12 @@
+name = "portfolio-ai-chat"
+main = "index.js"
+compatibility_date = "2026-07-15"
+workers_dev = true
+
+# Same Cloudflare account as worker/wrangler.toml (Dashboard → Workers & Pages →
+# Overview, right sidebar). Not sensitive, but not guessable from this repo.
+account_id = "dfc669c2db86a07cf37bb52373416596"
+
+# Workers AI binding used to run the chat model.
+[ai]
+binding = "AI"
