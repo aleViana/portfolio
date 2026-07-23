@@ -1,19 +1,19 @@
 [
   {
-    "name": "portfolio",
-    "description": "My portfoliio",
-    "url": "https://github.com/aleViana/portfolio",
-    "stars": 0,
-    "language": "CSS",
-    "updated": "2026-07-21T02:07:32Z"
-  },
-  {
     "name": "stats-visualizer-",
     "description": "stats ",
     "url": "https://github.com/aleViana/stats-visualizer-",
     "stars": 0,
     "language": "Python",
-    "updated": "2026-07-17T21:37:40Z"
+    "updated": "2026-07-22T21:17:37Z"
+  },
+  {
+    "name": "portfolio",
+    "description": "My portfoliio",
+    "url": "https://github.com/aleViana/portfolio",
+    "stars": 0,
+    "language": "CSS",
+    "updated": "2026-07-22T02:05:51Z"
   },
   {
     "name": "Nethttp",
